@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import authOperations from '../../redux/auth/auth-operations';
 
 const styles = {
   form: {
@@ -24,7 +26,7 @@ class RegisterView extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    // this.props.onRegister(this.state);
+    this.props.onRegister(this.state);
     this.setState({ name: '', email: '', password: '' });
   };
 
@@ -68,4 +70,8 @@ class RegisterView extends Component {
   }
 }
 
-export default RegisterView;
+const mapDispatchToProps = dispatch => ({
+  onRegister: data => dispatch(authOperations.register(data)),
+});
+
+export default connect(null, mapDispatchToProps)(RegisterView);

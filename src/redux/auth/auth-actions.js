@@ -1,6 +1,5 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { createAction } from '@reduxjs/toolkit';
-
-// Register Login Logout Current
 
 const registerRequest = createAction('auth/registerRequest');
 const registerSuccess = createAction('auth/registerSuccess');
@@ -22,7 +21,6 @@ export default {
   registerRequest,
   registerSuccess,
   registerError,
-
   loginRequest,
   loginSuccess,
   loginError,
