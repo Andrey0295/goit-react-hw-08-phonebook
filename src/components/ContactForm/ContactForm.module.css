@@ -1,0 +1,24 @@
+.contactForm {
+  display: flex;
+  flex-direction: column;
+
+  width: 400px;
+}
+
+.submitBtn {
+  cursor: pointer;
+
+  width: 90px;
+  margin: 5px;
+
+  font-weight: 600;
+  font-size: 12px;
+
+  background-color: lightgreen;
+  border-color: darkcyan;
+  border-radius: 10px;
+}
+
+.formInput {
+  width: 200px;
+}

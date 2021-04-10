@@ -1,0 +1,17 @@
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  margin-bottom: 5px;
+}
+
+.deleteBtn {
+  cursor: pointer;
+
+  font-weight: 500;
+  border-radius: 10px;
+  border: none;
+
+  background-color: lightcoral;
+}
