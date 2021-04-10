@@ -12,7 +12,7 @@ const styles = {
   },
 };
 
-const UserMenu = ({ avatar, name, onLogout }) => (
+const UserMenu = ({ name, onLogout }) => (
   <div style={styles.container}>
     <span style={styles.name}>Welcome, {name}</span>
     <button type="button" onClick={onLogout}>
