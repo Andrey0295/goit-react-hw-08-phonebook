@@ -6,10 +6,12 @@ const initialUserState = { name: null, email: null };
 
 const user = createReducer(initialUserState, {
   [authActions.registerSuccess]: (_, action) => action.payload.user,
+  [authActions.loginSuccess]: (_, action) => action.payload.user,
 });
 
 const token = createReducer(null, {
   [authActions.registerSuccess]: (_, action) => action.payload.token,
+  [authActions.loginSuccess]: (_, action) => action.payload.token,
 });
 
 const error = createReducer(null, {
