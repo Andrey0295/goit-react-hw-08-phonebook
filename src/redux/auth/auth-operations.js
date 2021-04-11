@@ -4,12 +4,24 @@ import authActions from './auth-actions';
 
 axios.defaults.baseURL = 'https://goit-phonebook-api.herokuapp.com';
 
+const token = {
+  set(token) {
+    axios.defaults.headers.common.Authorization = `Bearer ${token}`;
+  },
+  unset() {
+    axios.defaults.headers.common.Authorization = '';
+  },
+};
+
 const register = registerData => dispatch => {
   dispatch(authActions.registerRequest());
 
   axios
     .post('/users/signup', registerData)
-    .then(responce => dispatch(authActions.registerSuccess(responce.data)))
+    .then(responce => {
+      token.set(responce.data.token);
+      dispatch(authActions.registerSuccess(responce.data));
+    })
     .catch(error => dispatch(authActions.registerError(error.message)));
 };
 
@@ -18,11 +30,27 @@ const login = loginData => dispatch => {
 
   axios
     .post('/users/login', loginData)
-    .then(responce => dispatch(authActions.loginSuccess(responce.data)))
+    .then(responce => {
+      token.set(responce.data.token);
+      dispatch(authActions.loginSuccess(responce.data));
+    })
     .catch(error => dispatch(authActions.loginError(error.message)));
+};
+
+const logout = () => dispatch => {
+  dispatch(authActions.logoutRequest());
+
+  axios
+    .post('/users/logout')
+    .then(() => {
+      token.unset();
+      dispatch(authActions.logoutSuccess());
+    })
+    .catch(error => dispatch(authActions.logoutError(error.message)));
 };
 
 export default {
   register,
   login,
+  logout,
 };
