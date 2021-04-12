@@ -13,7 +13,7 @@ import LoginView from './views/ContactsView/LoginView';
 import ContactsView from './views/ContactsView/ContactsView';
 
 class App extends Component {
-  componentDidCatch() {
+  componentDidMount() {
     this.props.onGetCurrentUser();
   }
   render() {
@@ -46,7 +46,7 @@ class App extends Component {
 // );
 
 const mapDispatchToProps = dispatch => ({
-  onGetCurrentUser: dispatch(authOperations.getCurrentUser()),
+  onGetCurrentUser: () => dispatch(authOperations.getCurrentUser()),
 });
 
 export default connect(null, mapDispatchToProps)(App);
