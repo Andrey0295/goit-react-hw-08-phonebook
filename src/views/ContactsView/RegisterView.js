@@ -11,6 +11,9 @@ const styles = {
     flexDirection: 'column',
     marginBottom: 15,
   },
+  title: {
+    color: '#6738EA',
+  },
 };
 
 class RegisterView extends Component {
@@ -33,7 +36,7 @@ class RegisterView extends Component {
   render() {
     return (
       <div>
-        <h1>Страница регистрации</h1>
+        <h1 style={styles.title}>Страница регистрации</h1>
         <form style={styles.form} onSubmit={this.handleSubmit}>
           <label style={styles.label}>
             Имя

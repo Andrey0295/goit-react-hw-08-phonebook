@@ -6,11 +6,15 @@
   width: 800px;
   height: 400px;
 
+  margin-top: 2em;
   margin-right: auto;
   margin-left: auto;
   padding: 20px;
 
-  background-color: burlywood;
+  background-color: white;
+
+  border: 2px solid #af7eeb;
+  border-radius: 4em;
 }
 
 .contactsBlock {
@@ -18,4 +22,7 @@
 
   height: 191px;
   margin-left: 20px;
+}
+.title {
+  color: #af7eeb;
 }

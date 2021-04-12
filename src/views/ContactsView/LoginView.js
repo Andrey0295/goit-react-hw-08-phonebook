@@ -12,6 +12,9 @@ const styles = {
     flexDirection: 'column',
     marginBottom: 15,
   },
+  title: {
+    color: '#6738EA',
+  },
 };
 
 class LoginView extends Component {
@@ -35,7 +38,7 @@ class LoginView extends Component {
   render() {
     return (
       <div>
-        <h1>Страница логина</h1>
+        <h1 style={styles.title}>Страница логина</h1>
         <form style={styles.form} onSubmit={this.handleSubmit}>
           <label style={styles.label}>
             Почта

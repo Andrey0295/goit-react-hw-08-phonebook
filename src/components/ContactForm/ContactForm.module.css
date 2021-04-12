@@ -8,15 +8,22 @@
 .submitBtn {
   cursor: pointer;
 
-  width: 90px;
-  margin: 5px;
+  width: 10em;
+  height: 3em;
+  margin-top: 1em;
 
   font-weight: 600;
-  font-size: 12px;
+  font-size: 18px;
 
-  background-color: lightgreen;
+  background-color: #af7eeb;
+  color: white;
   border-color: darkcyan;
-  border-radius: 10px;
+  border-radius: 30px;
+}
+
+.submitBtn:hover {
+  background-color: white;
+  color: #af7eeb;
 }
 
 .formInput {

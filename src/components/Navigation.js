@@ -7,7 +7,7 @@ const styles = {
     textDecoration: 'none',
     padding: 12,
     fontWeight: 700,
-    color: '#2A363B',
+    color: '#af7eeb',
   },
   activeLink: {
     color: '#E84A5F',

@@ -19,12 +19,12 @@ class ContactsView extends Component {
       <Container>
         <div className={styles.mainBlock}>
           <div>
-            <h1>Phonebook</h1>
+            <h1 className={styles.title}>Phonebook</h1>
             <ContactForm onSubmit={this.handleContactsData} />
           </div>
 
           <div className={styles.contactsBlock}>
-            <h1>Contacts</h1>
+            <h1 className={styles.title}>Contacts</h1>
 
             <Filter />
             <ContactList />

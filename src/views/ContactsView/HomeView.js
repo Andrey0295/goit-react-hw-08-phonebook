@@ -1,15 +1,20 @@
 import React from 'react';
 
-const HomeStyles = {
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
+const styles = {
+  homeStyles: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  title: {
+    color: '#6738EA',
+  },
 };
 
 const HomeView = () => {
   return (
-    <div style={HomeStyles}>
-      <h1>Домашняя страница</h1>
+    <div style={styles.homeStyles}>
+      <h1 style={styles.title}>Домашняя страница</h1>
     </div>
   );
 };
