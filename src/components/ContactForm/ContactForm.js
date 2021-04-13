@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import shortid from 'shortid';
+import { TextField } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 
 import contactsOperations from '../../redux/contacts/contacts-operations';
 import contactsSelectors from '../../redux/contacts/contacts-selectors';
@@ -40,27 +42,40 @@ class ContactForm extends Component {
     const { name, number } = this.state;
     return (
       <form onSubmit={this.onFormSubmit} className={styles.contactForm}>
-        <label htmlFor={this.nameInputId}>Name</label>
-        <input
-          className={styles.formInput}
-          type="text"
-          name="name"
-          value={name}
-          onChange={this.onInputChange}
-          id={this.nameInputId}
-        />
-        <label htmlFor={this.numberInputId}>Number</label>
-        <input
-          className={styles.formInput}
-          type="number"
-          name="number"
-          value={number}
-          onChange={this.onInputChange}
-          id={this.numberInputId}
-        />
-        <button type="submit" className={styles.submitBtn}>
+        <label htmlFor={this.nameInputId} className={styles.label}>
+          <TextField
+            id={this.nameInputId}
+            label="Name"
+            color="secondary"
+            type="text"
+            name="name"
+            value={name}
+            onChange={this.onInputChange}
+            size="small"
+          />
+        </label>
+
+        <label htmlFor={this.numberInputId} className={styles.label}>
+          <TextField
+            id={this.numberInputId}
+            label="Number"
+            color="secondary"
+            type="number"
+            name="number"
+            value={number}
+            onChange={this.onInputChange}
+            size="small"
+          />
+        </label>
+
+        <Button
+          variant="contained"
+          color="primary"
+          type="submit "
+          className={styles.submitBtn}
+        >
           Add contacts
-        </button>
+        </Button>
       </form>
     );
   }

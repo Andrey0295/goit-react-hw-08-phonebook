@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button } from '@material-ui/core';
 
 import styles from './ContactListItem.module.css';
 
@@ -7,13 +8,15 @@ const ContactListItem = ({ name, number, onDelete, contactId }) => {
   return (
     <li className={styles.listItem}>
       {name}: {number}
-      <button
+      <Button
+        variant="contained"
+        color="primary"
         type="button"
         className={styles.deleteBtn}
         onClick={() => onDelete(contactId)}
       >
         Delete
-      </button>
+      </Button>
     </li>
   );
 };

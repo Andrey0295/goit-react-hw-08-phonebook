@@ -7,11 +7,10 @@
 }
 
 .deleteBtn {
-  cursor: pointer;
+  width: 3em;
+  height: 2em;
 
   font-weight: 500;
-  border-radius: 10px;
-  border: none;
 
   background-color: rgb(109, 1, 1);
   color: white;

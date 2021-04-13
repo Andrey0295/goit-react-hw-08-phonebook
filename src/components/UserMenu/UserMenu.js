@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import authSelectors from '../../redux/auth/auth-selectors';
 import authOperations from '../../redux/auth/auth-operations';
+import { Button } from '@material-ui/core';
 
 const styles = {
   container: {
@@ -13,15 +14,28 @@ const styles = {
   name: {
     fontWeight: 700,
     marginRight: 12,
+    color: '#af7eeb',
+  },
+  button: {
+    height: '2em',
+    backgroundColor: '#af7eeb',
+    color: 'white',
+    fontWeight: 400,
   },
 };
 
 const UserMenu = ({ email, onLogout }) => (
   <div style={styles.container}>
     <span style={styles.name}>{email}</span>
-    <button type="button" onClick={onLogout}>
+    <Button
+      style={styles.button}
+      variant="contained"
+      color="primary"
+      type="button"
+      onClick={onLogout}
+    >
       Logout
-    </button>
+    </Button>
   </div>
 );
 

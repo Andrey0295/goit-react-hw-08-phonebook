@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Button } from '@material-ui/core';
 
 import authOperations from '../../redux/auth/auth-operations';
 
@@ -58,7 +59,10 @@ class LoginView extends Component {
               onChange={this.handleChange}
             />
           </label>
-          <button type="submit">Войти</button>
+          <Button variant="contained" color="primary" type="submit">
+            Войти
+          </Button>
+          {/* <button type="submit">Войти</button> */}
         </form>
       </div>
     );

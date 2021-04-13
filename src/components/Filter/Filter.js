@@ -4,21 +4,23 @@ import shortid from 'shortid';
 import { connect } from 'react-redux';
 import contactsActions from '../../redux/contacts/contacts-actions';
 import contactsSelectors from '../../redux/contacts/contacts-selectors';
-
-import styles from './Filter.module.css';
+import { TextField } from '@material-ui/core';
 
 const Filter = ({ filterValue, onChangeFilter }) => {
   const filterInputId = shortid.generate();
   return (
     <>
-      <label htmlFor={filterInputId}>Find contact by name</label>
-      <input
-        className={styles.filterInput}
-        type="text"
-        value={filterValue}
-        onChange={onChangeFilter}
-        id={filterInputId}
-      />
+      <label htmlFor={filterInputId}>
+        <TextField
+          id={filterInputId}
+          label="Find contact by name"
+          color="secondary"
+          type="text"
+          value={filterValue}
+          onChange={onChangeFilter}
+          size="small"
+        />
+      </label>
     </>
   );
 };

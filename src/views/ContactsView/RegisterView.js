@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import authOperations from '../../redux/auth/auth-operations';
+import { Button } from '@material-ui/core';
 
 const styles = {
   form: {
@@ -65,8 +66,11 @@ class RegisterView extends Component {
               onChange={this.handleChange}
             />
           </label>
+          <Button variant="contained" color="primary" type="submit">
+            Зарегестрироваться
+          </Button>
 
-          <button type="submit">Зарегестрироваться</button>
+          {/* <button type="submit">Зарегестрироваться</button> */}
         </form>
       </div>
     );
