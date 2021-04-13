@@ -4,10 +4,12 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
 
+import store from './redux/store';
+
 import App from './App';
+
 import 'modern-normalize/modern-normalize.css';
 import './styles.css';
-import store from './redux/store';
 
 ReactDOM.render(
   <React.StrictMode>

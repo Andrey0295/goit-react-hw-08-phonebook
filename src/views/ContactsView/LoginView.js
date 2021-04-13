@@ -62,7 +62,6 @@ class LoginView extends Component {
           <Button variant="contained" color="primary" type="submit">
             Войти
           </Button>
-          {/* <button type="submit">Войти</button> */}
         </form>
       </div>
     );

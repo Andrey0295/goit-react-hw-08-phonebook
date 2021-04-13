@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import ContactListItem from './ContactListItem/ContactListItem';
 import contactsOperations from '../../redux/contacts/contacts-operations';
 import contactsSelectors from '../../redux/contacts/contacts-selectors';
+
+import ContactListItem from './ContactListItem/ContactListItem';
 
 const ContactList = ({ contactsData, onDelete }) => {
   return (

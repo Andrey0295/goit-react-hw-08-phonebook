@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 import contactsOperations from '../../redux/contacts/contacts-operations';
 
 import Container from '../../components/Container/Container';
 import ContactForm from '../../components/ContactForm/ContactForm';
-
 import ContactList from '../../components/ContactList/ContactList';
 import Filter from '../../components/Filter/Filter';
 
-import styles from './App.module.css';
+import styles from './ContactsView.module.css';
 
 class ContactsView extends Component {
   componentDidMount() {
-    this.props.fetchContacts();
+    const { fetchContacts } = this.props;
+    fetchContacts();
   }
   render() {
     return (

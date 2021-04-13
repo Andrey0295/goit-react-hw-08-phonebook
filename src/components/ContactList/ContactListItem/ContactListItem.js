@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button } from '@material-ui/core';
 
+import { Button } from '@material-ui/core';
 import styles from './ContactListItem.module.css';
 
 const ContactListItem = ({ name, number, onDelete, contactId }) => {

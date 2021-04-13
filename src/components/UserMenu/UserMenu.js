@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import authSelectors from '../../redux/auth/auth-selectors';
 import authOperations from '../../redux/auth/auth-operations';
+
 import { Button } from '@material-ui/core';
 
 const styles = {

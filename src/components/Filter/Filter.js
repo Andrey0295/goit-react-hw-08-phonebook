@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import { connect } from 'react-redux';
+
 import contactsActions from '../../redux/contacts/contacts-actions';
 import contactsSelectors from '../../redux/contacts/contacts-selectors';
+
 import { TextField } from '@material-ui/core';
 
 const Filter = ({ filterValue, onChangeFilter }) => {

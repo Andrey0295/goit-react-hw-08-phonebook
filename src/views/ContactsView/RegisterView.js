@@ -69,8 +69,6 @@ class RegisterView extends Component {
           <Button variant="contained" color="primary" type="submit">
             Зарегестрироваться
           </Button>
-
-          {/* <button type="submit">Зарегестрироваться</button> */}
         </form>
       </div>
     );

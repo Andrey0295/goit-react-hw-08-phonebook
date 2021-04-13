@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import shortid from 'shortid';
-import { TextField } from '@material-ui/core';
-import { Button } from '@material-ui/core';
 
 import contactsOperations from '../../redux/contacts/contacts-operations';
 import contactsSelectors from '../../redux/contacts/contacts-selectors';
 
+import { TextField } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import styles from './ContactForm.module.css';
 
 class ContactForm extends Component {
