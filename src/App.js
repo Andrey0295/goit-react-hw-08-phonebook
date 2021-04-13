@@ -12,6 +12,9 @@ import LoginView from './views/ContactsView/LoginView';
 
 import ContactsView from './views/ContactsView/ContactsView';
 
+import PrivateRoute from './components/PrivateRoute';
+import PublicRoute from './components/PublicRoute';
+
 class App extends Component {
   componentDidMount() {
     this.props.onGetCurrentUser();
@@ -23,9 +26,23 @@ class App extends Component {
 
         <Switch>
           <Route exact path="/" component={HomeView} />
-          <Route path="/register" component={RegisterView} />
-          <Route path="/login" component={LoginView} />
-          <Route path="/contacts" component={ContactsView} />
+          <PublicRoute
+            path="/register"
+            restricted
+            component={RegisterView}
+            redirectTo="/"
+          />
+          <PublicRoute
+            path="/login"
+            restricted
+            component={LoginView}
+            redirectTo="/contacts"
+          />
+          <PrivateRoute
+            path="/contacts"
+            component={ContactsView}
+            redirectTo="/login"
+          />
         </Switch>
       </Container>
     );
